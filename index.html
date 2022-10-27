@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>PS-Phive! By Leeful v1.0 (Mod By 84Ciss FOR PS4 9.00)</title>
+<title>PS-Phive! By Leeful (Mod By 84Ciss FOR PS4 9.00) v1.0</title>
 <style>
 html{}body{background-color:#1849A5;background:url("BG.jpg");background-size:cover;background-repeat:no-repeat;color:#DDE5EA;font-family:sans-serif;font-size:22px;overflow:hidden;cursor: none;
 }
@@ -215,6 +215,11 @@ text-align: center;
 color: white;
 }
 </style>
+<script src="loader.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
 <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPDtext></pre><div id=CacheProgress><div id=CacheBar></div></div></div>
 <div id=Loader class=Loader></div>
 <script>
@@ -245,16 +250,11 @@ UA=navigator.userAgent.substring(navigator.userAgent.indexOf("9.00 (") + 28,navi
 
 function load_exploit(){
 ScrOverlay.style.display="block";CacheProgress.style.display="none";cacheUPDtxt.innerHTML="Loading Exploit, Please Wait ...";
-setTimeout(jailbreak,500);
+setTimeout(jailbreak,1000);
 }
 
 if (window.applicationCache.status!='0'){load_exploit();}
 </script>
-<script src="loader.js"></script>
-<script src="int64.js"></script>
-<script src="rop.js"></script>
-<script src="kexploit.js"></script>
-<script src="webkit.js"></script>
 </head>
 <body >
 <div id=MenuSelection onmouseenter=SetMenuButton()>
@@ -269,23 +269,23 @@ if (window.applicationCache.status!='0'){load_exploit();}
 
 <div id=MainMenu class=MenuClass style=display:block>
 <div PL-Title="Main Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains payloads to exploit and run homebrew on <br>your 9.00 firmware PS4.<br>Other payloads that are frequently used can also be found here like FTP and Bin Loader." class="Box Icon">&#xf30f;</div
-><div PL-Title="PlatinumHEN" PL-Bin="henplatinum2.bin" PL-Ver="v2.5beta - By 84Ciss"                PL-Desc="Enable Homebrew, Enable Debug Settings, Enable Update Blocker,<br>Enable External HDD Support, PSVR Support , Remote PKG Installer Support, 9.xx External HDD Support,<br>Full Rest Mode Support, Debug Trophies Support, Enable UART,<br>Enable Blocked Screenshots."  class="Box Icon"><img src="hen.svg"></div
-><div PL-Title="GoldHEN" PL-Bin="goldhen_2.2.5b2.bin"  PL-Ver="2.2.5b2 - By SYSTRo"              PL-Desc="Enable Homebrew, Enable Debug Settings, Enable Update Blocker,<br>Enable External HDD Support, PSVR Support , Remote PKG Installer Support, 9.xx External HDD Support,<br>Full Rest Mode Support, Debug Trophies Support, Enable UART,<br>Enable Blocked Screenshots."  class="Box Icon"><img src="hen.svg"></div
+><div PL-Title="PlatinumHEN v2.5" PL-Bin="henplatinum2.bin" PL-Ver="v2.5beta - By 84Ciss"                PL-Desc="Enable Homebrew, Enable Debug Settings, Enable Update Blocker,<br>Enable External HDD Support, PSVR Support , Remote PKG Installer Support, 9.xx External HDD Support,<br>Full Rest Mode Support, Debug Trophies Support, Enable UART,<br>Enable Blocked Screenshots."  class="Box Icon"><img src="hen.svg"></div
+><div PL-Title="GoldHEN v2.2.5b2" PL-Bin="goldhen_2.2.5b2.bin"  PL-Ver="2.2.5b2 - By SYSTRo"              PL-Desc="Enable Homebrew, Enable Debug Settings, Enable Update Blocker,<br>Enable External HDD Support, PSVR Support , Remote PKG Installer Support, 9.xx External HDD Support,<br>Full Rest Mode Support, Debug Trophies Support, Enable UART,<br>Enable Blocked Screenshots."  class="Box Icon"><img src="hen.svg"></div
 ><div PL-Title="Bin Loader"  PL-Bin="BINLOADER"     PL-Ver="v1.0 - By OpenOrbis"                                       PL-Desc="Loads a bin or elf file sent to the PS4 IP address on port 9020.<br>Netcat or Netcat GUI is recommended to send the files to the PS4." class="Box Icon">&#xf019;</div
 ></div>
 
 <div id=ModMenu class=MenuClass style=display:none>
 <div  PL-Title="Game Mods Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains Mod Menus and Trainers for PS4 Games.<br><br>GTA V Mod Menus are compatable with different update versions of the game." class="Box Icon">&#xf30f;</div
 ><div PL-Title="PS4 Trainer (WebRTE)"           PL-Bin="webrte.bin"           PL-Ver="v1.0 - By PS4 Trainer"                                            PL-Desc="Run payload then go to ps4trainer.com/Trainer/index.html<br>on any device to use trainers." class="Box Icon">&#xf108;</div
-><div PL-Title="Oysters Menu For RDR 2 v1.29" PL-Bin="OystersMenu129.bin" PL-Ver="v1.3.6 - By RF0oDxM0Dz" PL-Desc="Mod Menu for RDR 2<br>*Game version 1.29.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf63b;</div
-><div PL-Title="BeefQueefMod138 Menu For GTA V v1.38" PL-Bin="BeefQueefMod138.bin" PL-Ver="v1.38c - Original Version By RF0oDxM0Dz / 9.00 PORT By GraFfiX420"  PL-Desc="Mod Menu for GTA V<br>*Game update v1.38 must be installed.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf5e1;</div
+><div PL-Title="Oysters Menu For RDR 2 v1.29" PL-Bin="OystersMenu129.bin" PL-Ver="v1.0 - Original Version By RF0oDxM0Dz" PL-Desc="Mod Menu for RDR 2<br>*Game version 1.29.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf63b;</div
+><div PL-Title="BeefQueefMod138 Menu For GTA V v1.38" PL-Bin="BeefQueefMod138.bin" PL-Ver="v1.38 - Original Version By RF0oDxM0Dz / 9.00 PORT By GraFfiX420"  PL-Desc="Mod Menu for GTA V<br>*Game update v1.38 must be installed.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf5e1;</div
 ><div PL-Title="Lamance Menu For GTA V v1.38"   PL-Bin="Lamance.bin"   PL-Ver="v1.38 - By david1337hax"                                         PL-Desc="Mod Menu for GTA V<br>*Game update v1.38 must be installed.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf5e1;</div
 ></div>
 
 <div id=ToolsMenu class=MenuClass style=display:none>
 <div  PL-Title="Tools Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains tools to do various tasks and change things on your PS4." class="Box Icon">&#xf30f;</div
-><div PL-Title="Orbis Toolbox"      PL-Bin="OrbisToolbox.bin"           PL-Ver="v1.0 - By OSM" PL-Desc="add Option Debug feature" class="Box Icon"><img src="hen.svg"></div
-><div PL-Title="PS4 Debug"     PL-Bin="ps4debug.bin"     PL-Ver="v1.0.15 - By Golden" PL-Desc="Ps4 Debugger" class="Box Icon"><img src="hen.svg"></div
+><div PL-Title="Orbis Toolbox"      PL-Bin="OrbisToolbox.bin"           PL-Ver="v1.0 - By OSM" PL-Desc="<br><br>" class="Box Icon"><img src="hen.svg"></div
+><div PL-Title="PS4 Debug"     PL-Bin="ps4debug.bin"     PL-Ver="v1.0.15 - By ()" PL-Desc="<br><br>" class="Box Icon"><img src="hen.svg"></div
 ></div>
 
 <div id=BackupMenu class=MenuClass style=display:none>
@@ -303,7 +303,7 @@ if (window.applicationCache.status!='0'){load_exploit();}
 </div>
 
 <div id=navFix1 tabindex="6"></div>
-<div id=Title class=Title>PlatinumHEN</div>
+<div id=Title class=Title>PlatinumHEN v2.5</div>
 <div id=Popup onclick="Popup.classList.remove('animation');"><div id="PopIcon"></div><div id="PopTitle"></div></div>
 <div id=BottomPopup></div>
 <div id=InfoBox style=display:none><div id=InfoTitle></div><div id=InfoVerAuth></div><div id=InfoDesc></div></div>
@@ -331,7 +331,7 @@ function UpdateTitle(){Title.className="TitleAnim";setTimeout(function(){ChangeT
 function HideTitle(){Title.className="NoTitle";}
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 
-function LoadPayload(){window.msgs.style='display:block;';Payload=TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Title');PLfile=""+TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Bin');if(Payload=='PlatinumHEN'||Payload=='GoldHEN'){msgs.innerHTML="Loading "+Payload;LoadedMSG=Payload+" Loaded Successfully<br>Press The Circle Button To Exit";setTimeout(toogle_payload,100);}else if(Payload=='Bin Loader'){LoadedMSG="Send Payload To Port 9020";setTimeout(runBinLoader,100);}else if(Payload.includes("GTA V")){JSfile="00_LoaderPL.js";msgs.innerHTML="Loading "+Payload;LoadedMSG=Payload+" Loaded Successfully<br>Press The PS Button Then Load GTA V";setTimeout(toogle_payload,100);}else if(Title.innerHTML=='Credits'){ThisIsCredits='1';SS.LastPage='Credits.html';ScrOverlay.style.opacity="1";ScrOverlay.style.display="block";ScrOverlay.innerHTML='<object type="text/html" data="Credits.html"style="width:100%;height:100%;"></object>';}else if(PLfile.slice((PLfile.lastIndexOf(".")-1>>>0)+2)=="js"){JSfile="00_LoaderPL.js";msgs.innerHTML="Loading "+Payload+" Please Wait ...";LoadedMSG=Payload+" Loaded";function GetJS(){var script=document.createElement('script');script.src=PLfile;document.body.appendChild(script);}
+function LoadPayload(){window.msgs.style='display:block;';Payload=TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Title');PLfile=""+TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Bin');if(Payload=='PlatinumHEN v2.5'||Payload=='GoldHEN v2.2.5b2'){msgs.innerHTML="Loading "+Payload;LoadedMSG=Payload+" Loaded Successfully<br>Press The Circle Button To Exit";setTimeout(toogle_payload,100);}else if(Payload=='Bin Loader'){LoadedMSG="Send Payload To Port 9020";setTimeout(runBinLoader,100);}else if(Payload.includes("GTA V")){JSfile="00_LoaderPL.js";msgs.innerHTML="Loading "+Payload;LoadedMSG=Payload+" Loaded Successfully<br>Press The PS Button Then Load GTA V";setTimeout(toogle_payload,100);}else if(Title.innerHTML=='Credits'){ThisIsCredits='1';SS.LastPage='Credits.html';ScrOverlay.style.opacity="1";ScrOverlay.style.display="block";ScrOverlay.innerHTML='<object type="text/html" data="Credits.html"style="width:100%;height:100%;"></object>';}else if(PLfile.slice((PLfile.lastIndexOf(".")-1>>>0)+2)=="js"){JSfile="00_LoaderPL.js";msgs.innerHTML="Loading "+Payload+" Please Wait ...";LoadedMSG=Payload+" Loaded";function GetJS(){var script=document.createElement('script');script.src=PLfile;document.body.appendChild(script);}
 setTimeout(function(){(function(next){GetJS();next();}
 (function(){setTimeout(toogle_payload,500);}));},200);}else{JSfile="00_LoaderPL.js";LoadedMSG=Payload+" Loaded";setTimeout(toogle_payload,100);}}
 
