@@ -1,0 +1,377 @@
+<html>
+<head>
+<title>PS-Phive! By Leeful (Mod By 84Ciss FOR PS4 9.00) v1.0</title>
+<style>
+html{}body{background-color:#1849A5;background:url("BG.jpg");background-size:cover;background-repeat:no-repeat;color:#DDE5EA;font-family:sans-serif;font-size:22px;overflow:hidden;cursor: none;
+}
+@font-face {font-family:'Icons';font-style:normal;font-weight:900;src: local('Icons'), url(Icons.ttf) format('truetype');
+}/* rgba(40,40,40,.7) */
+.Icon{background:linear-gradient(to bottom left,rgba(40,40,40,.5),rgba(00,00,00,.7),rgba(00,00,00,.7),rgba(40,40,40,.5));background-size:100% 100%;background-repeat:no-repeat;cursor: none;
+}
+.LoadingTXT {
+position:absolute;
+left:330px;
+top:145px;
+height:60px;
+text-align:center;
+font-weight:bold;
+font-size:28px;
+text-shadow: -2px 2px #274478;
+line-height:27px;
+letter-spacing:3px;
+padding:3 0 0 0;
+z-index:100;
+}
+.settings{
+position:relative;top:3px;display:inline-block;vertical-align:top;background-size:100%;
+border:0px solid #BBCEEF;border-radius:15px;
+width:20px;height:20px;
+margin:6px 2px 0 2px;
+line-height:20px;font-family:'Icons';font-size:20px;text-align:center;color:white;
+}
+#MenuSelection{
+position:absolute;overflow:hidden;display:inline-block;white-space:nowrap;
+top:10px;left:45px;
+width:96%;height:70px;
+}
+.But0{/* unselected */
+background:none;border:none;color:white;font-size:25px;font-weight:bold;opacity:.4;
+border:3px solid transparent;border-radius:5px;
+padding:4px 14px 6px 14px;
+display:inline-block;
+}
+.But2{/* current */
+background:none;color:white;font-size:25px;font-weight:bold;
+border:3px solid transparent;border-radius:5px;
+padding:4px 14px 6px 14px;
+display:inline-block;
+}
+.But0:hover {
+background:rgba(40,40,40,.3);color:white;font-size:25px;font-weight:bold;
+border:3px solid #C0BEBE;border-radius:5px;
+padding:4px 14px 6px 14px;opacity:1;
+}
+.But2:hover {
+background:rgba(40,40,40,.3);color:white;font-size:25px;font-weight:bold;
+border:3px solid #C0BEBE;border-radius:5px;
+padding:4px 14px 6px 14px;opacity:1;
+}
+#PassFail{
+position:fixed;right:10px;bottom:10px;
+font-size:18px;font-weight:bold;z-index:1;text-shadow:-1px 1px #646468;text-align:right;
+}
+.Info1{
+position:absolute;top:264px;left:75px;font-size:24px;color:white;text-shadow:-2px 2px #274478;
+}
+#InfoBox{
+position:absolute;top:400px;left:60px;display:inline-block;
+text-shadow: -2px 2px #274478;
+width:900px;height:300px;color:white;
+}
+#InfoTitle{
+position:relative;top:0;left:0;
+height:58px;color:white;font-size:42px;font-weight:bolder;overflow:hidden;white-space:nowrap;
+}
+#InfoVerAuth{
+position:relative;top:0;left:0;
+height:40px;color:white;font-size:24px;font-weight:bold;overflow:hidden;white-space:nowrap;
+}
+#InfoDesc{
+position:relative;top:0;left:0;
+font-size:24px;overflow:hidden;
+}
+.InfoIcon{transition:all 200ms;
+position:relative;top:6px;display:inline-block;background-size:100%;margin:0 10px 0 10px;
+border:3px solid transparent;box-shadow:0 0 0 3px #C0BEBE;border-radius:18px;background-clip:content-box;
+width:168px;height:168px;
+line-height:168px;font-family:'Icons';font-size:90px;text-align:center;color:white;
+text-shadow:-3px 3px 5px black;
+}
+#CacheProgress {
+position:fixed;left:0;right:0;top:0;bottom:30px;max-width:100%;max-height:100%;margin:auto;
+width:1076px;height:8px;
+background-color:transparent;border:3px solid #afc1de;box-shadow: -4px 2px 5px 0px rgba(0,0,0,0.49);border-radius:3px;
+}
+#CacheBar {
+width:0%;height:100%;background-color:white;
+}
+.cacheUPDbg {transition:opacity 1000ms;
+position:fixed;left:0;right:0;top:0;bottom:0;max-width:100%;max-height:100%;margin:auto;	
+width:100%;height:100%;
+background:url("BG.jpg");
+opacity:1;display:none;z-index:900;
+}
+.cacheUPDtext {
+position:fixed;left:38%;right:0;top:280px;bottom:0px;max-width:100%;max-height:100%;margin:auto;	
+width:900px;height:400px;
+line-height:30px;align-items:left;
+font-family:sans-serif;font-size:28px;text-align:left;color:white;z-index:901;text-shadow: -2px 2px #274478;
+}
+*:focus{outline:0;
+}
+extra{position:absolute;Right:10px;top:3px;font-size:22%;margin-top:37%;font-family:sans-serif;
+}
+img{width:100%;-webkit-filter: drop-shadow(-3px 3px 5px black);
+}
+.Loader{transition:opacity 300ms;
+position:absolute;left:237px;top:381px;overflow:hidden;	
+width:265px;height:56px;
+z-index:99;
+opacity:1;
+}
+.MenuContainer{transition:height 200ms;
+position:absolute;overflow:hidden;display:inline-block;z-index:9;white-space:nowrap;
+top:80px;left:-40px;
+width:102.5%;height:420px;
+}
+.MenuClass{transition:left 400ms;
+position:absolute;left:-40px;top:0px;height:170px;padding-left:100px;
+}
+.MenuClass2{transition:opacity 300ms;
+position:absolute;left:-40px;top:0px;height:170px;padding-left:100px;opacity:0;
+}
+.Box{transition:all 200ms;
+position:relative;top:3px;display:inline-block;vertical-align:top;background-size:100%;
+border:0px solid #BBCEEF;border-radius:15px;
+width:106px;height:106px;
+margin:6px 2px 0 2px;
+line-height:106px;font-family:'Icons';font-size:50px;text-align:center;color:white;
+text-shadow:-3px 3px 5px black;
+}
+.SelectedItem{transition:all 200ms;
+position:relative;top:6px;display:inline-block;background-size:100%;margin:0 10px 0 10px;
+border:3px solid transparent;box-shadow:0 0 0 3px #C0BEBE;border-radius:18px;background-clip:content-box;
+width:168px;height:168px;
+line-height:168px;font-family:'Icons';font-size:90px;text-align:center;color:white;
+text-shadow:-3px 3px 5px black;
+}
+.SelectedItem2{
+position:relative;top:6px;display:inline-block;background-size:100%;margin:0 10px 0 10px;
+border:3px solid transparent;box-shadow:0 0 0 3px transparent;border-radius:18px;background-clip:content-box;
+width:168px;height:168px;
+line-height:168px;font-family:'Icons';font-size:90px;text-align:center;color:white;
+text-shadow:-3px 3px 5px black;
+}
+.Title{transition:top 100ms, opacity 100ms;
+position:absolute;font-size:25px;font-weight:normal;overflow:hidden;white-space:nowrap;
+top:200px;left:335px;width:950px;height:57px;opacity:1;
+}
+.NoTitle{transition:top 100ms, opacity 100ms;
+position:absolute;font-size:25px;font-weight:normal;overflow:hidden;white-space:nowrap;
+top:200px;left:335px;width:950px;height:57px;opacity:0;
+}
+.TitleAnim{transition:top 100ms, opacity 200ms;
+position:absolute;font-size:25px;font-weight:normal;overflow:hidden;white-space:nowrap;
+top:200px;left:335px;width:950px;height:57px;opacity:0;
+}
+#Popup {
+position:absolute;left:-600px;height:90px;margin-top:-9px;
+background-color:white; 
+box-shadow:5px 2px 20px 1px black;	
+}
+#Popup.animation {
+animation-name:PopupAni;
+animation-duration:6s;
+}
+@keyframes PopupAni {
+0%{left:-600px; top:10px;} 8%{left:0px; top:10px;} 90%{left:0px; top:10px;} 100%{left:-600px; top:10px;}
+}
+#PopIcon {
+position:absolute;left:85px;top:50%;width:60px;height:60px; 
+transform: translateY(-50%);
+background:url("PopUp.png");
+}
+#PopTitle {
+padding:10px 0 6px 0;margin-left:160px; margin-right:32px; 
+font-size:25px;font-weight:lighter;color:black; 
+}
+#BottomPopup {overflow:hidden;z-index:2;
+position:fixed;left:0;right:0;bottom:-250px;width:99%;height:210px;margin-left:8px;
+cursor:pointer;background:rgba(40,40,40,1);box-shadow:0 0 15px 1px black;
+border-style:solid;border-width:2px 2px 0 1px;border-radius:18px 18px 0 0;
+}
+#BottomPopup.animation {
+animation-name:BottomPopupAni;animation-duration:600ms;animation-fill-mode: forwards;
+}
+@keyframes BottomPopupAni {
+from{bottom:-250px;}to{bottom:0px;}
+}
+#navFix0{border:0px solid black;
+position:fixed;left:0;right:0;top:0;bottom:500px;max-width:100%;max-height:100%;margin:auto;overflow:hidden;width:1200px;height:1px;cursor: none;
+}
+#navFix1{border:0px solid red;
+position:fixed;left:3px;right:0;top:0;bottom:0;max-width:100%;max-height:100%;margin:auto;overflow:hidden;width:1px;height:1px;cursor: none;
+}
+#navFix2{border:0px solid green;
+position:fixed;left:0;right:3px;top:0;bottom:0;max-width:100%;max-height:100%;margin:auto;overflow:hidden;width:1px;height:1px;cursor: none;
+}
+#navFix3{border:0px solid white;
+position:fixed;left:0;right:0;top:0;bottom:400px;max-width:100%;max-height:100%;margin:auto;overflow:hidden;width:1200px;height:1px;cursor: none;
+}
+h1 {
+text-shadow: 0.1em 0.1em 0.2em black;
+font-size: 25px;
+text-align: center;
+color: white;
+}
+</style>
+<script src="loader.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+<div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPDtext></pre><div id=CacheProgress><div id=CacheBar></div></div></div>
+<div id=Loader class=Loader></div>
+<script>
+if (window.applicationCache.status=='0'){ScrOverlay.style.display="block";Loader.innerHTML='<object type="text/html" data="installCache.html" style="width:265px; height:56px;"></object>';}
+function JBfail(){localStorage.failcount= ++localStorage.failcount;failCounter.innerHTML=localStorage.failcount;msgs.innerHTML = "Jailbreak failed! - Reboot your PS4 and try again.";alert("Jailbreak failed!\n Reboot your PS4 and try again.");}
+function load_exploit_done(){
+localStorage.passcount= ++localStorage.passcount;passCounter.innerHTML=localStorage.passcount;
+cacheUPDtxt.innerHTML="Exploit Loaded Successfully";
+TargetMenu.style.left=-700;
+setTimeout(function(){TargetMenu.style.left=-40;},500);
+setTimeout(function(){TargetMenu.style.left=-700;},1000);
+setTimeout(function(){TargetMenu.style.left=-40;},1500);
+setTimeout(function(){TargetMenu.style.left=-700;},2000);
+setTimeout(function(){ScrOverlay.style.opacity="0";TargetMenu.style.left=-40;},2500);
+setTimeout(function(){ScrOverlay.style.display="none";},3500);
+//setTimeout(function(){GetInfo();},3600);
+}
+function awaitpl2() {
+ msgs.innerHTML="Binloader Ready Send A Payload To Port 9020 Now";
+}
+
+function awaitpl() {
+window.msgs.innerHTML="<h1 style=color:#87FF33>"+LoadedMSG+"</h1>";
+}
+</script>
+<script>
+UA=navigator.userAgent.substring(navigator.userAgent.indexOf("9.00 (") + 28,navigator.userAgent.indexOf(") Apple"));
+
+function load_exploit(){
+ScrOverlay.style.display="block";CacheProgress.style.display="none";cacheUPDtxt.innerHTML="Loading Exploit, Please Wait ...";
+setTimeout(jailbreak,1000);
+}
+
+if (window.applicationCache.status!='0'){load_exploit();}
+</script>
+</head>
+<body >
+<div id=MenuSelection onmouseenter=SetMenuButton()>
+<div class=but2> Main </div>&nbsp;&nbsp;
+<div class=but0> Game Mods </div>&nbsp;&nbsp;
+<div class=but0> Tools </div>&nbsp;&nbsp;
+<div class=but0> Backup & Restore</div>&nbsp;&nbsp;
+<div class=but0> Dumper </div>&nbsp;&nbsp;
+</div>
+
+<div id=MenuContainer class=MenuContainer onclick=GetInfo()>
+
+<div id=MainMenu class=MenuClass style=display:block>
+<div PL-Title="Main Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains payloads to exploit and run homebrew on <br>your 9.00 firmware PS4.<br>Other payloads that are frequently used can also be found here like FTP and Bin Loader." class="Box Icon">&#xf30f;</div
+><div PL-Title="PlatinumHEN v2.5" PL-Bin="henplatinum2.bin" PL-Ver="v2.5beta - By 84Ciss"                PL-Desc="Enable Homebrew, Enable Debug Settings, Enable Update Blocker,<br>Enable External HDD Support, PSVR Support , Remote PKG Installer Support, 9.xx External HDD Support,<br>Full Rest Mode Support, Debug Trophies Support, Enable UART,<br>Enable Blocked Screenshots."  class="Box Icon"><img src="hen.svg"></div
+><div PL-Title="GoldHEN v2.2.5b6" PL-Bin="goldhen_2.2.5b6.bin"  PL-Ver="2.2.5b3 - By SYSTRo"              PL-Desc="Enable Homebrew, Enable Debug Settings, Enable Update Blocker,<br>Enable External HDD Support, PSVR Support , Remote PKG Installer Support, 9.xx External HDD Support,<br>Full Rest Mode Support, Debug Trophies Support, Enable UART,<br>Enable Blocked Screenshots."  class="Box Icon"><img src="hen.svg"></div
+><div PL-Title="Bin Loader"  PL-Bin="BINLOADER"     PL-Ver="v1.0 - By OpenOrbis"                                       PL-Desc="Loads a bin or elf file sent to the PS4 IP address on port 9020.<br>Netcat or Netcat GUI is recommended to send the files to the PS4." class="Box Icon">&#xf019;</div
+></div>
+
+<div id=ModMenu class=MenuClass style=display:none>
+<div  PL-Title="Game Mods Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains Mod Menus and Trainers for PS4 Games.<br><br>GTA V Mod Menus are compatable with different update versions of the game." class="Box Icon">&#xf30f;</div
+><div PL-Title="PS4 Trainer (WebRTE)"           PL-Bin="webrte.bin"           PL-Ver="v1.0 - By PS4 Trainer"                                            PL-Desc="Run payload then go to ps4trainer.com/Trainer/index.html<br>on any device to use trainers." class="Box Icon">&#xf108;</div
+><div PL-Title="Oysters Menu For RDR 2 v1.29" PL-Bin="OystersMenu129.bin" PL-Ver="v1.0 - Original Version By RF0oDxM0Dz" PL-Desc="Mod Menu for RDR 2<br>*Game version 1.29.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf63b;</div
+><div PL-Title="BeefQueefMod138 Menu For GTA V v1.38" PL-Bin="BeefQueefMod138.bin" PL-Ver="v1.38 - Original Version By RF0oDxM0Dz / 9.00 PORT By GraFfiX420"  PL-Desc="Mod Menu for GTA V<br>*Game update v1.38 must be installed.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf5e1;</div
+><div PL-Title="Lamance Menu For GTA V v1.38"   PL-Bin="Lamance.bin"   PL-Ver="v1.38 - By david1337hax"                                         PL-Desc="Mod Menu for GTA V<br>*Game update v1.38 must be installed.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf5e1;</div
+></div>
+
+<div id=ToolsMenu class=MenuClass style=display:none>
+<div  PL-Title="Tools Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains tools to do various tasks and change things on your PS4." class="Box Icon">&#xf30f;</div
+><div PL-Title="Orbis Toolbox"      PL-Bin="OrbisToolbox.bin"           PL-Ver="v1.0 - By OSM" PL-Desc="<br><br>" class="Box Icon"><img src="hen.svg"></div
+><div PL-Title="PS4 Debug"     PL-Bin="ps4debug.bin"     PL-Ver="v1.0.15 - By ()" PL-Desc="<br><br>" class="Box Icon"><img src="hen.svg"></div
+></div>
+
+<div id=BackupMenu class=MenuClass style=display:none>
+<div  PL-Title="Backup Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains various payloads to backup all aspect of useful things on your PS4.<br><br>NOTE! These backups will only work on your current Profile and accountID!<br>If you plan to initialize or replace your HDD you must also make a backup of your existing profile using the official backup/restore app in system settings!" class="Box Icon">&#xf30f;</div
+><div PL-Title="Database Backup"      PL-Bin="backup.bin"           PL-Ver="v1.0 - By Leeful" PL-Desc="Create a backup of important database files.<br><br>A backup of your app databases will be created and saved internally on your PS4 HDD and also to USB if a USB drive is inserted." class="Box Icon">&#xf56e;</div
+><div PL-Title="Database Restore"     PL-Bin="restore.bin"     PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of important database files.<br><br>Restore a backup of your application databases will be restored internally to your PS4 hard drive." class="Box Icon">&#xf56e;</div
+></div>
+
+<div id=DumperMenu class=MenuClass style=display:none>
+<div  PL-Title="Game Dumper Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains payloads to dump games from your PS4 <br>so that you can then build your own fake packages that you can install." class="Box Icon">&#xf30f;</div
+><div PL-Title="Dump Game & Update"         PL-Bin="gamedumper.bin" PL-Ver="v1.8 - Original Version By xVortex / 9.00 Port By 84Ciss" PL-Desc="Dump your games or apps to a USB drive to be able to create fpkg files.<br><br>This payload will dump your game and game update (if there is one) into two seperate folders on your USB drive.<br>No config file is needed with this payload!" class="Box Icon">&#xf1b3;</div
+><div PL-Title="Dump Game PKG"             PL-Bin="pkgbackup.bin"  PL-Ver="v1.1 - 9.00 By ()" PL-Desc="Dump your games or apps to a USB drive to be able to create fpkg files.<br><br>This payload will dump just your game on your USB drive.<br><br>No config file is needed with this payload!" class="Box Icon">&#xf1b2;</div
+></div>
+
+</div>
+
+<div id=navFix1 tabindex="6"></div>
+<div id=Title class=Title>PlatinumHEN v2.5</div>
+<div id=Popup onclick="Popup.classList.remove('animation');"><div id="PopIcon"></div><div id="PopTitle"></div></div>
+<div id=BottomPopup></div>
+<div id=InfoBox style=display:none><div id=InfoTitle></div><div id=InfoVerAuth></div><div id=InfoDesc></div></div>
+<div id=msgs style=display:none class=LoadingTXT></div>
+<div id=FanTemp class=Info1></div>
+<div id=PassFail>Detected Firmware Version: v<span id=FWver></span><br>Exploit Stats:&nbsp; Pass = <span id=passCounter></span>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;Fail = <span id=failCounter></span></div>
+<script>
+var SS=sessionStorage;var LS=localStorage;var CC=createCookie;var RC=readCookie;function createCookie(name,value,days){if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));var expires="; expires="+date.toGMTString();}else
+expires="";document.cookie=name+"="+value+expires;}
+function readCookie(name){var nameEQ=name+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')
+c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)
+return c.substring(nameEQ.length,c.length);}
+return null;}
+if(LS.passcount==null){LS.passcount=0;}
+passCounter.innerHTML=LS.passcount;if(LS.failcount==null){LS.failcount=0;}
+failCounter.innerHTML=LS.failcount;FWver.innerHTML=UA;if(LS.CurrentTemp==null){LS.CurrentTemp=79;}
+function ShowFanTemp(){FanTemp.style.display='block';FanTemp.innerHTML='Current Threshold Setting:<font color="yellow">'+LS.CurrentTemp+'&#176;</font>';}
+function HideFanTemp(){FanTemp.style.display='none';}
+if(sessionStorage.length==0){MenuNumber=1;SS.MenuNumber=MenuNumber;SS.ItemNum=2;SS.MenuPos=-40;MenuContainer.children[MenuNumber-1].setAttribute('id','TargetMenu');TargetMenu.children[SS.ItemNum-1].className="SelectedItem Icon";MenuStatus=1;Loaded=0;SS.ThisIsFanControl=0;SS.ThisIsFwSpoofer=0;}else{MenuNumber=SS.MenuNumber;MenuContainer.children[MenuNumber-1].setAttribute('id','TargetMenu');TargetMenu.children[SS.ItemNum-1].className="SelectedItem Icon";MenuStatus=1;Loaded=0;SS.ThisIsFanControl=0;SS.ThisIsFwSpoofer=0;}
+function UpdateSelectMenu(){var x=TargetMenu.childElementCount;for(i=0;i<x;i++){TargetMenu.children[i].className="Box Icon";}
+TargetMenu.children[SS.ItemNum-1].className="SelectedItem2 Icon";ShowMenuInfo();SS.MenuNumber=MenuNumber;}
+function UpdateMenu(){setTimeout(function(){if(MenuStatus==1){TargetMenu.children[SS.ItemNum-1].className="SelectedItem Icon";}else{TargetMenu.children[SS.ItemNum-1].className="SelectedItem2 Icon";}},0);if(MenuStatus==1){TargetMenu.children[SS.ItemNum-1].className="SelectedItemAnim Icon";TargetMenu.style.left=SS.MenuPos+'px';}
+UpdateTitle();ShowInfo();var x=TargetMenu.childElementCount;for(i=0;i<x;i++){TargetMenu.children[i].className="Box Icon";}}
+function UpdateTitle(){Title.className="TitleAnim";setTimeout(function(){ChangeText(TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));},100);setTimeout(function(){Title.className="Title";},100);setTimeout(function(){if(TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Title')=='Fan Control'){ShowFanTemp();}else{HideFanTemp();}},100);}
+function HideTitle(){Title.className="NoTitle";}
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+
+function LoadPayload(){window.msgs.style='display:block;';Payload=TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Title');PLfile=""+TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Bin');if(Payload=='PlatinumHEN v2.5'||Payload=='GoldHEN v2.2.5b6'){msgs.innerHTML="Loading "+Payload;LoadedMSG=Payload+" Loaded Successfully<br>Press The Circle Button To Exit";setTimeout(toogle_payload,100);}else if(Payload=='Bin Loader'){LoadedMSG="Send Payload To Port 9020";setTimeout(runBinLoader,100);}else if(Payload.includes("GTA V")){JSfile="00_LoaderPL.js";msgs.innerHTML="Loading "+Payload;LoadedMSG=Payload+" Loaded Successfully<br>Press The PS Button Then Load GTA V";setTimeout(toogle_payload,100);}else if(Title.innerHTML=='Credits'){ThisIsCredits='1';SS.LastPage='Credits.html';ScrOverlay.style.opacity="1";ScrOverlay.style.display="block";ScrOverlay.innerHTML='<object type="text/html" data="Credits.html"style="width:100%;height:100%;"></object>';}else if(PLfile.slice((PLfile.lastIndexOf(".")-1>>>0)+2)=="js"){JSfile="00_LoaderPL.js";msgs.innerHTML="Loading "+Payload+" Please Wait ...";LoadedMSG=Payload+" Loaded";function GetJS(){var script=document.createElement('script');script.src=PLfile;document.body.appendChild(script);}
+setTimeout(function(){(function(next){GetJS();next();}
+(function(){setTimeout(toogle_payload,500);}));},200);}else{JSfile="00_LoaderPL.js";LoadedMSG=Payload+" Loaded";setTimeout(toogle_payload,100);}}
+
+function loadPage(){MenuStatus=3;if(Title.innerHTML=='Fan Control'){Loaded='1';SS.ThisIsFanControl='1';SS.LastPage='FanControl.html';BottomPopup.innerHTML='<object type="text/html" data="FanControl.html" style="width:99%; height:200px;"></object>';var script=document.createElement('script');script.src="pl_Fanthresh.js";document.body.appendChild(script);}
+if(Title.innerHTML=='Firmware Spoofer'){Loaded='1';SS.ThisIsFwSpoofer='1';SS.LastPage='FwSpoof.html';BottomPopup.innerHTML='<object type="text/html" data="FwSpoof.html" style="width:99%; height:200px;"></object>';var script=document.createElement('script');script.src="pl_FWspoof.js";document.body.appendChild(script);}
+LoadPayload();}
+function loadPage2(){if(SS.ThisIsFanControl=='2'){window.msgs.style='display:block;';window.setTEMP();msgs.innerHTML="Setting Temp Threshold ...";LoadedMSG="Temp Threshold Set Successfully";var script=document.createElement('script');script.src="pl_Fanthresh2.js";document.body.appendChild(script);}
+if(SS.ThisIsFwSpoofer=='2'){window.msgs.style='display:block;';window.setFW();msgs.innerHTML="Spoofing Firmware Version ...";LoadedMSG="Firmware Version Spoofed";var script=document.createElement('script');script.src="pl_FWspoof2.js";document.body.appendChild(script);}}
+function ChangeText(text){Title.innerHTML=text;}
+function ChangeInfoBoxTitle(text){InfoTitle.innerHTML=text;}
+function ChangeInfoBoxVer(text){InfoVerAuth.innerHTML=text;}
+function ChangeInfoBoxDesc(text){InfoDesc.innerHTML=text;}
+IBT=ChangeInfoBoxTitle;IBV=ChangeInfoBoxVer;IBD=ChangeInfoBoxDesc;function pop(){Popup.classList.remove('animation');void Popup.offsetWidth;Popup.classList.add('animation');}
+function BottomPop(){BottomPopup.classList.add('animation');}
+function GetInfo(){if(Loaded==0&&TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Bin')!="INFO"){var x=document.querySelectorAll(".box");var i;for(i=0;i<x.length;i++){x[i].style.opacity="0";}
+InfoBox.style.display='block';Title.style.display='none';loadPage();}else{loadPage2();}}
+function ShowMenuInfo(){IBT(TargetMenu.children[0].getAttribute('PL-Title'));IBV(TargetMenu.children[0].getAttribute('PL-Ver'));IBD(TargetMenu.children[0].getAttribute('PL-Desc'));}
+function ShowInfo(){if(Title.innerHTML=='Fan Control'){};if(Title.innerHTML=='Firmware Spoofer'){};InfoBox.style.display='block';IBT(TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));IBV(TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Ver'));IBD(TargetMenu.children[SS.ItemNum-1].getAttribute('PL-Desc'));}
+ShowInfo();function HideLoaderBox(){Loaded='1';setTimeout(function(){var x=document.querySelectorAll(".SelectedItem");var i;for(i=0;i<x.length;i++){x[i].className="InfoIcon Icon";}},1500);}
+function SelectionMenuOFF(){var x=MenuSelection.childElementCount;for(i=0;i<x;i++){MenuSelection.children[i].removeAttribute("tabindex");}}
+function SelectionMenuON(){SelectionMenuOFF();function AllON(){var x=MenuSelection.childElementCount;for(i=0;i<x;i++){MenuSelection.children[i].setAttribute("tabindex","1");}}
+MenuSelection.children[MenuNumber-1].setAttribute("tabindex","1");setTimeout(AllON,100);}
+function SetMenuButton(){var x=MenuSelection.childElementCount;for(i=0;i<x;i++){MenuSelection.children[i].className="But0";}
+MenuSelection.children[MenuNumber-1].className="But2";}
+function SwapMenuR(){SS.ItemNum=2;SS.MenuPos=-40;MenuNumber=parseInt(SS.MenuNumber)+1;TargetMenu.style="display:none";var x=MenuContainer.childElementCount;for(i=0;i<x;i++){MenuContainer.children[i].id="other";}
+MenuContainer.children[MenuNumber-1].setAttribute('id','TargetMenu');SetMenuButton();UpdateSelectMenu();TargetMenu.style="display:block";TargetMenu.style.left="-40px";}
+function SwapMenuL(){SS.ItemNum=2;SS.MenuPos=-40;MenuNumber=parseInt(SS.MenuNumber)-1;TargetMenu.style="display:none";var x=MenuContainer.childElementCount;for(i=0;i<x;i++){MenuContainer.children[i].id="other";}
+MenuContainer.children[MenuNumber-1].setAttribute('id','TargetMenu');SetMenuButton();UpdateSelectMenu();TargetMenu.style="display:block";TargetMenu.style.left="-40px";}
+var x=MenuContainer.childElementCount;for(i=0;i<x;i++){MenuContainer.children[i].style="display:none";}
+UpdateTitle();SetMenuButton();TargetMenu.style="display:block";TargetMenu.children[SS.ItemNum-1].className="SelectedItem Icon";TargetMenu.style.left=SS.MenuPos+'px';window.onkeyup=checkKeyUp;function checkKeyUp(e){e=e||window.event;if(e.keyCode=='117'&&Loaded==0){}
+else if(e.keyCode=='116'&&Loaded==0){}}
+window.onkeydown=checkKeyDown;function checkKeyDown(e){e=e||window.event;var MoveMenu=110;if(e.keyCode=='27'&&ThisIsCredits==1){SS.removeItem('LastPage');ThisIsCredits=0;window.location.reload();}else if(e.keyCode=='117'&&Loaded==0){}
+else if(e.keyCode=='116'&&Loaded==0){}
+else if(SS.ThisIsFanControl!=0||SS.ThisIsFwSpoofer!=0){}
+else if(e.keyCode=='38'&&MenuStatus==1&&Loaded==0){MenuStatus=0;SelectionMenuON();TargetMenu.children[SS.ItemNum-1].className="SelectedItem2 Icon";HideTitle();UpdateSelectMenu();ShowMenuInfo();HideFanTemp();}
+else if(e.keyCode=='40'&&MenuStatus==0&&Loaded==0){MenuStatus=1;SelectionMenuOFF();TargetMenu.children[SS.ItemNum-1].className="SelectedItem Icon";UpdateTitle();ShowInfo();}
+else if(e.keyCode=='37'&&Loaded==0&&MenuStatus==0&&MenuNumber-1>=1&&MenuNumber<=MenuSelection.childElementCount){SwapMenuL();}
+else if(e.keyCode=='39'&&Loaded==0&&MenuStatus==0&&MenuNumber-1>=0&&MenuNumber<MenuSelection.childElementCount){SwapMenuR();}
+else if(e.keyCode=='37'&&MenuStatus==1&&SS.ItemNum-1>=1&&SS.ItemNum<=TargetMenu.childElementCount){SS.MenuPos=parseInt(SS.MenuPos)+MoveMenu;SS.ItemNum=parseInt(SS.ItemNum)-1;SelectionMenuOFF();UpdateMenu();}
+else if(e.keyCode=='39'&&MenuStatus==1&&SS.ItemNum-1>=0&&SS.ItemNum<TargetMenu.childElementCount){SS.MenuPos=parseInt(SS.MenuPos)-MoveMenu;SS.ItemNum=parseInt(SS.ItemNum)+1;SelectionMenuOFF();UpdateMenu();}}
+</script>
+</body>
+</html>
